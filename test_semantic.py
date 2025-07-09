@@ -23,16 +23,16 @@ from pprint import pprint
 # '''
 
 # --- Ejemplo con comparación entre strings ---
-# code = '''
-# string a;
-# string b;
-# a = "Nathaly";
-# b = "Zuleyka";
-#
-# if (a < b) {
-#     print("Sí, a va antes alfabéticamente");
-# }
-# '''
+code = '''
+string a;
+string b;
+a = "Nathaly";
+b = "Zuleyka";
+
+if (a < b) {
+    print("Sí, a va antes alfabéticamente");
+}
+'''
 
 # --- Ejemplo con error semántico ---
 # code = '''
@@ -41,14 +41,14 @@ from pprint import pprint
 # '''
 
 # --- Ejemplo con función válida ---
-code = '''
-int sumar(int a, int b) {
-    return a + b;
-}
+# code = '''
+# int sumar(int a, int b) {
+#     return a + b;
+# }
 
-int x;
-x = sumar(5, 10);
-'''
+# int x;
+# x = sumar(5, 10);
+# '''
 
 # ----------------------------------------------
 
