@@ -1,6 +1,6 @@
 from lexer import lexer
 
-# Código de prueba
+# Código fuente de prueba
 code = '''
 int x;
 string nombre;
@@ -12,9 +12,13 @@ if (x > 10) {
 }
 '''
 
+# Enviar el código al lexer
 lexer.input(code)
 
 # Mostrar tokens uno por uno
-print("Tokens encontrados:")
-for tok in lexer:
+print("🔍 Tokens encontrados:")
+while True:
+    tok = lexer.token()
+    if not tok:
+        break
     print(f"{tok.type}({tok.value}) en línea {tok.lineno}")
