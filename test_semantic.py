@@ -1,4 +1,4 @@
-from parser import parser
+from parser_module import parser
 from semantic import SemanticAnalyzer, SemanticError
 from pprint import pprint
 
@@ -68,3 +68,5 @@ except SemanticError as e:
     print("Error semántico:", e)
 except Exception as ex:
     print("Error general:", ex)
+
+input("\nPresiona Enter para salir...")

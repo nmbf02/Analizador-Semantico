@@ -1,4 +1,4 @@
-from parser import parser
+from parser_module import parser
 from pprint import pprint
 
 # Código fuente de ejemplo

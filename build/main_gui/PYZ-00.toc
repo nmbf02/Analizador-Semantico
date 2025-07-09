@@ -249,7 +249,7 @@
   ('opcode',
    'C:\\Users\\natha\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\opcode.py',
    'PYMODULE'),
-  ('parser', 'C:\\Analizador-Semantico\\parser.py', 'PYMODULE'),
+  ('parser_module', 'C:\\Analizador-Semantico\\parser_module.py', 'PYMODULE'),
   ('pathlib',
    'C:\\Users\\natha\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\pathlib\\__init__.py',
    'PYMODULE'),

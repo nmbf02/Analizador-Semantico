@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox, scrolledtext
 from lexer import lexer
-from parser import parser
+from parser_module import parser
 from semantic import SemanticAnalyzer, SemanticError
 from pprint import pformat
 
