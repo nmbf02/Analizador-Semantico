@@ -1,6 +1,16 @@
 from parser_module import parser
 from semantic import SemanticAnalyzer, SemanticError
 from pprint import pprint
+import os
+
+# ===============================
+#      ANALIZADOR SEMÁNTICO
+# ===============================
+
+print("=" * 40)
+print("  ANALIZADOR LÉXICO, SINTÁCTICO Y SEMÁNTICO")
+print("=" * 40)
+print()
 
 # Puedes comentar/descomentar el bloque que quieras probar:
 
@@ -45,28 +55,39 @@ if (a < b) {
 # int sumar(int a, int b) {
 #     return a + b;
 # }
-
+#
 # int x;
 # x = sumar(5, 10);
 # '''
 
 # ----------------------------------------------
 
-print("Analizando sintaxis...")
+print(" Analizando sintaxis...\n")
 
 try:
     ast = parser.parse(code)
-    print("Árbol de análisis sintáctico generado correctamente.")
-    print("AST generado:")
-    pprint(ast, width=120)
 
+    print(" Árbol de análisis sintáctico generado correctamente.\n")
+    print(" AST generado:")
+    print("-" * 40)
+    pprint(ast, width=120)
+    print("-" * 40)
+
+    print("\n Ejecutando análisis semántico...\n")
     analyzer = SemanticAnalyzer()
     analyzer.analyze(ast)
-    print("Análisis semántico exitoso.")
+
+    print(" Análisis semántico exitoso. No se encontraron errores.\n")
 
 except SemanticError as e:
-    print("Error semántico:", e)
+    print(" Error semántico:", e)
+
 except Exception as ex:
-    print("Error general:", ex)
+    print(" Error general:", ex)
+
+# Final
+print("=" * 40)
+print("  PROCESO FINALIZADO")
+print("=" * 40)
 
 input("\nPresiona Enter para salir...")
